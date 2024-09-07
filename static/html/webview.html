@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title></title>
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			html,body {
+				width: 100%;
+				height: 100%;
+			}
+			#content {
+				padding: 20px;
+			}
+			#iframe {
+				width: 100%;
+				height: 100%;
+				border: none;
+			}
+		</style>
+		<script src="./js/uni.webview.1.5.4.js" type="text/javascript" charset="utf-8"></script>
+  </head>
+  <body>
+		<iframe id="iframe" width="100%" height="100%"></iframe>
+		<div id="content">12121212</div>
+  </body>
+	<script type="text/javascript">
+		var iframe = document.getElementById('iframe');
+		var content = document.getElementById('content');
+		// 当iframe加载完成后执行
+		iframe.onload = () => {
+			// 获取iframe的document对象
+			var iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+			// 获取你想要的元素，例如其class为"myElement"
+			var elementInsideIframe = iframeDoc.body;
+			// 获取元素高度
+			var elementHeight = elementInsideIframe.offsetHeight;
+			console.log('iframe高度:', elementHeight);
+			setTimeout(() => {
+				postMessage({
+					type: 'height',
+					data: elementHeight
+				})
+			}, 100)
+		};
+		/* 监听app发来的消息 */
+		window['getUniAppMessage'] = function (data) {
+			console.log('getUniAppMessage', JSON.stringify(data))
+			if (data.url) {
+				iframe.src = data.url;
+				content.parentNode.removeChild(content)
+			} else if (data.html) {
+				content.innerHTML = data.html
+				iframe.parentNode.removeChild(iframe)
+				setTimeout(() => {
+					var elementHeight = content.offsetHeight;
+					postMessage({
+						type: 'height',
+						data: elementHeight
+					})
+				}, 100)
+			}
+		}
+		/* uni初始化 */
+		document.addEventListener('UniAppJSBridgeReady', function() {
+			postMessage({
+				type: 'load',
+				data: 'hello uniapp'
+			})
+		});
+		function postMessage(data) {
+			// console.log(JSON.stringify(window['uni']));
+			window.uni.postMessage({
+				data
+			})
+		}
+	</script>
+</html>

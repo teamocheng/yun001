@@ -1,0 +1,167 @@
+@font-face {
+  font-family: "iconfont"; /* Project id 4638998 */
+  src: url('@/static/iconfont/iconfont.woff2?t=1722414040255') format('woff2'),
+      url('@/static/iconfont/iconfont.woff?t=1722414040255') format('woff'),
+      url('@/static/iconfont/iconfont.ttf?t=1722414040255') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-file:before {
+  content: "\e7ec";
+}
+
+.icon-biaoti:before {
+  content: "\e609";
+}
+
+.icon-ziti:before {
+  content: "\e603";
+}
+
+.icon-qingchugeshi:before {
+  content: "\e7ac";
+}
+
+.icon-charu:before {
+  content: "\e602";
+}
+
+.icon-liebiao:before {
+  content: "\e62d";
+}
+
+.icon-zitizihao:before {
+  content: "\e610";
+}
+
+.icon-wenbenduanla:before {
+  content: "\e6a4";
+}
+
+.icon-zitidaxiao:before {
+  content: "\e854";
+}
+
+.icon-tupian:before {
+  content: "\e69f";
+}
+
+.icon-shipin:before {
+  content: "\e64d";
+}
+
+.icon-fengexian:before {
+  content: "\e601";
+}
+
+.icon-fuxuankuang:before {
+  content: "\e600";
+}
+
+.icon-shijian:before {
+  content: "\e7eb";
+}
+
+.icon-hanggao:before {
+  content: "\e6dc";
+}
+
+.icon-zitijiacu:before {
+  content: "\e681";
+}
+
+.icon-zitixieti:before {
+  content: "\e682";
+}
+
+.icon-zitixiahuaxian:before {
+  content: "\e683";
+}
+
+.icon-zitishanchuxian:before {
+  content: "\e684";
+}
+
+.icon-zitixiabiao:before {
+  content: "\e685";
+}
+
+.icon-zitishangbiao:before {
+  content: "\e686";
+}
+
+.icon-lianjie:before {
+  content: "\e687";
+}
+
+.icon-zuoduiqi:before {
+  content: "\e689";
+}
+
+.icon-youduiqi:before {
+  content: "\e68a";
+}
+
+.icon-juzhongduiqi:before {
+  content: "\e68b";
+}
+
+.icon-zuoyouduiqi:before {
+  content: "\e68c";
+}
+
+.icon-biaoti1:before {
+  content: "\e68d";
+}
+
+.icon-biaoti2:before {
+  content: "\e68e";
+}
+
+.icon-biaoti3:before {
+  content: "\e68f";
+}
+
+.icon-biaoti4:before {
+  content: "\e690";
+}
+
+.icon-biaoti5:before {
+  content: "\e691";
+}
+
+.icon-biaoti6:before {
+  content: "\e692";
+}
+
+.icon-beijingyanse:before {
+  content: "\e693";
+}
+
+.icon-wuxupailie:before {
+  content: "\e694";
+}
+
+.icon-youxupailie:before {
+  content: "\e695";
+}
+
+.icon-outdent:before {
+  content: "\e696";
+}
+
+.icon-indent:before {
+  content: "\e697";
+}
+
+.icon-zitiyanse:before {
+  content: "\e69a";
+}
+

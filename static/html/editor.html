@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title></title>
+		<style>
+		</style>
+		<link href="https://cdn.jsdelivr.net/npm/quill@2.0.2/dist/quill.snow.css" rel="stylesheet" />
+		<script src="https://cdn.jsdelivr.net/npm/quill@2.0.2/dist/quill.js"></script>
+		<script src="./js/uni.webview.1.5.4.js" type="text/javascript" charset="utf-8"></script>
+  </head>
+  <body>
+		
+		<div id="editor">
+		  <p>Hello World!</p>
+		  <p>Some initial <strong>bold</strong> text</p>
+		  <p><br /></p>
+		</div>
+		<script>
+		  const quill = new Quill('#editor', {
+		    theme: 'snow'
+		  });
+		</script>
+  </body>
+</html>
